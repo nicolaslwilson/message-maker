@@ -1,6 +1,6 @@
 # Message Maker
 
-Message Maker is a web application for creating and populating templates with data. Message Maker was built using JavaScript ES6 with a sprinkling of jQuery, Moment.js and lodash. The interface for the application was created using Google's Material Components for Web.
+Message Maker is a web application for creating and populating templates with data. Message Maker was built using JavaScript ES6 and jQuery, with a sprinkling of Moment.js and lodash. The interface for the application was created using Google's Material Components for Web.
 
 ### Preview
 
@@ -10,12 +10,14 @@ Message Maker is a web application for creating and populating templates with da
 
 ### Installation
 
+The app can be viewed live [here](https://nicolaslwilson.github.io/message-maker/dist/).
+
 To run Message Maker locally:
 
 1. Download and unpack the .zip or clone the repository
 2. Run `npm install` to install dependencies
 3. Run `npm start` to start the Webpack Development Server
-4. The application should open automatically in your default web browser at `localhost:8080`.
+4. The application should build and open automatically in your default web browser at `localhost:8080`.
 
 ### Use
 

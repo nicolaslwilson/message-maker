@@ -8,6 +8,7 @@ export class Template {
 		this.elements = [];
 	}
 
+	//Passed an array of template element JSON, convert them into template element objects
 	loadTemplateData(array) {
 		for (let element of array) {
 			let newElement;
@@ -53,6 +54,7 @@ export class Template {
 		return this.insertData(data).join('');
 	}
 
+	// Insert input data into template elements and get the output
 	insertData (data) {
 		return this.elements.map(function (element) {
 			return element.getContent(data);

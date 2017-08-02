@@ -3,7 +3,6 @@ import 'material-components-web/dist/material-components-web.css';
 import './style.css';
 import {MessageDataService} from './services/message-data-service.js';
 import {MessageMakerInterface} from './ui/message-maker-interface.js';
-// import {Template} from './classes/template.js';
 
 export class App {
 	constructor(defaultMessage){

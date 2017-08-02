@@ -1,5 +1,6 @@
 import {TemplateButton} from '../ui/template-button.js';
 
+//Outputs a static string
 export class TemplateElement {
 	constructor (content = 'Static template text goes here') {
 		this.content = content;

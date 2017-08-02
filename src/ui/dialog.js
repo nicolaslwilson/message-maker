@@ -1,6 +1,7 @@
 import {BaseElement} from './base-element.js';
 import * as dialog from '@material/dialog';
 
+//Simple Material Dialog component to display some content as a modal
 export class Dialog extends BaseElement {
 	constructor(title, content) {
 		super();

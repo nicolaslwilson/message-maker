@@ -1,6 +1,8 @@
 import {TemplateElement} from './template-element.js';
 import moment from 'moment-timezone';
 
+
+// Template elements that outputs a formatted time and date for a guest's check in
 export class CheckInTime extends TemplateElement {
 	getHTML() {
 		return super.getHTML('check-in-time', 'Check In Time');

@@ -1,6 +1,7 @@
 import {TemplateElement} from './template-element.js';
 import _ from 'lodash';
 
+// Outputs a value from data input based on a path
 export class TemplateVariable extends TemplateElement {
 	constructor (path = 'guest.firstName') {
 		super(path);
@@ -8,6 +9,7 @@ export class TemplateVariable extends TemplateElement {
 	getContent(data) {
 		let path = this.content;
 		let fallback = this.content;
+		// Use lodash's get method to access a particular value for a key path
 		return _.get(data, path, fallback);
 	}
 

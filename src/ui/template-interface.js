@@ -6,6 +6,7 @@ import {Dialog} from './dialog.js';
 import {Select} from './select.js';
 import {TEMPLATE_ELEMENT_TYPES} from '../constants.js';
 
+// This class creates the interface for interacting with the template
 export class TemplateInterface extends Grid {
 	constructor(templateData) {
 		super();
@@ -15,21 +16,21 @@ export class TemplateInterface extends Grid {
 	createElement() {
 		super.createElement();
 
+		// Some instructions for using the interface
 		let interfaceHeader = new GridCell(12);
 		interfaceHeader.appendToElement(this.element);
 		interfaceHeader.element.addClass('mdc-typography');
-
 		let interfaceTitle = $('<h3>')
 			.text('Current Template')
 		let interfaceInstructions = $('<p>')
 			.text('Click a template element to make changes');
 		interfaceHeader.element.append([interfaceTitle, interfaceInstructions]);
 
+		//Interface for viewing and interacting with template components
 		let templateDisplay = new GridCell(12);
 		templateDisplay.appendToElement(this.element);
 		templateDisplay.element.addClass('template-display');
 		this.element.on('click', this.renderTemplate.bind(this));
-
 		this._createInterfaceControls();
 		this._createEventListeners();
 
@@ -38,6 +39,7 @@ export class TemplateInterface extends Grid {
 		return this.element;
 	}
 
+	// Get HTML elements representing a template object so they can be displayed on the DOM
 	getTemplateElementList() {
 		let templateElements = this.templateData.template.elements.map((templateElement) => {
 			return templateElement.getHTML().element;
@@ -45,6 +47,7 @@ export class TemplateInterface extends Grid {
 		return templateElements;
 	}
 
+	// Render the template element on the DOM
 	renderTemplate(){
 		let templateElementsList = this.getTemplateElementList();
 		let templateDisplay = this.element.children('.template-display');

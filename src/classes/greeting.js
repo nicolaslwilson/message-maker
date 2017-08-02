@@ -2,6 +2,7 @@ import {TemplateElement} from './template-element.js';
 import moment from 'moment-timezone';
 import _ from 'lodash';
 
+// The greeting template element is used to generate a greeting based on the local time of day
 export class Greeting extends TemplateElement {
 	constructor(greetings = {
 		morning: 'Good morning ',
@@ -51,9 +52,12 @@ export class Greeting extends TemplateElement {
 	}
 
 	editTemplate(event) {
-		let content = _.values(this.content).join('|');
+		// Use lodash values to create an array from the greeting content object
+		let content = _.values(this.content)
+		content = content.join('|');
 		let input = prompt('Please enter greetings for morning, afternoon and evening. Each greeting should be separated by a | character.', content);
 		if (input){
+			//Split the input into an array and then destructure that into variables
 			let [morning, afternoon, evening] = input.split('|');
 			this.content = {morning, afternoon, evening};
 		} else {

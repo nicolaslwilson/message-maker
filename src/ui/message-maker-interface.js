@@ -3,6 +3,7 @@ import {DataInterface} from './data-interface.js';
 import {MessageDisplay} from './message-display.js';
 import {TemplateInterface} from './template-interface.js';
 
+//This class assembles the different interface components
 export class MessageMakerInterface extends Layout {
 
     constructor(pageTitle, app) {

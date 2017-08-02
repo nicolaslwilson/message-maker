@@ -1,6 +1,7 @@
 import {Grid} from './grid.js';
 import {GridCell} from './grid-cell.js';
 
+// This class is used to display the template output
 export class MessageDisplay extends Grid {
 	constructor(message) {
 		super()

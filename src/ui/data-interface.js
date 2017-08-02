@@ -4,6 +4,7 @@ import {Grid} from './grid.js';
 import {GridCell} from './grid-cell.js';
 import {Template} from '../classes/template.js';
 
+// This class creates the interface for the user to select input data and a template
 export class DataInterface extends Grid {
 	constructor(app) {
 		super()
@@ -16,7 +17,7 @@ export class DataInterface extends Grid {
 		gridCell.createElement();
 
 		let appData = this.app.templateData;
-
+		// Create drop down menus to select input data for template
 		let hotelSelect = new Select(appData.hotels, 'company');
 		hotelSelect.appendToElement(this.element).wrap(gridCell.element);
 		hotelSelect.component.listen('MDCSelect:change', () => {
@@ -29,6 +30,7 @@ export class DataInterface extends Grid {
 			appData.guest = guestSelect.getSelection();
 		});
 
+		//Create drop down menu to select the template to use to generate our message
 		let templateSelect = new Select(appData.templates, 'title');
 		templateSelect.appendToElement(this.element).wrap(gridCell.element);
 		templateSelect.component.listen('MDCSelect:change', () => {
@@ -38,6 +40,7 @@ export class DataInterface extends Grid {
 			this.app.messageMakerInterface.templateInterface.renderTemplate();
 		});
 
+		//Create button to trigger template output
 		let makeMessageButton = new Button('Generate');
 		makeMessageButton.appendToElement(this.element).wrap(gridCell.element);
 		makeMessageButton.element.on('click', () => {

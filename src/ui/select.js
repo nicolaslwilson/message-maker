@@ -1,5 +1,5 @@
 import {BaseElement} from './base-element.js';
-import {MDCSelect as mdc} from '@material/select';
+import * as select from '@material/select';
 
 export class Select extends BaseElement {
 	constructor(array, key) {
@@ -11,7 +11,7 @@ export class Select extends BaseElement {
 	createElement() {
 		super.createElement();
 		this.element.find('.mdc-list-item').first().attr('aria-selected', true);
-		this.component = new mdc.select.MDCSelect(this.element[0]);
+		this.component = new select.MDCSelect(this.element[0]);
 	}
 	getElementString() {
 		let listItems = '';

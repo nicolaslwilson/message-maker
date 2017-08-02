@@ -1,5 +1,5 @@
 import {BaseElement} from './base-element.js';
-import * as mdc from '@material/dialog';
+import * as dialog from '@material/dialog';
 
 export class Dialog extends BaseElement {
 	constructor(title, content) {
@@ -10,7 +10,7 @@ export class Dialog extends BaseElement {
 
 	createElement() {
 		super.createElement();
-		this.component = new mdc.dialog.MDCDialog(this.element[0]);
+		this.component = new dialog.MDCDialog(this.element[0]);
 	}
 
 	getElementString() {
@@ -35,6 +35,4 @@ export class Dialog extends BaseElement {
 							<div class="mdc-dialog__backdrop"></div>
 						</aside>`
 	}
-
-
 }

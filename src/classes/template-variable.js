@@ -1,5 +1,5 @@
-import _ from 'lodash';
 import {TemplateElement} from './template-element.js';
+import _ from 'lodash';
 
 export class TemplateVariable extends TemplateElement {
 	constructor (path = 'guest.firstName') {

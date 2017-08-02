@@ -1,0 +1,54 @@
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.data-interface .mdc-select {
+	width:100%;
+}
+
+.template-display  {
+	padding: 10px;
+}
+
+.template-controls {
+	text-align: right;
+}
+
+.template-button {
+	display: inline-block;
+	margin: 0.5em;
+}
+
+.template-button.template-string {
+	color: whitesmoke;
+	background-color: lightcoral;
+}
+
+.template-button.greeting {
+	color: whitesmoke;
+	background-color: lightgreen;
+}
+
+.template-button.template-variable {
+	color: whitesmoke;
+	background-color: lightskyblue;
+}
+
+.template-button.check-in-time {
+	color: whitesmoke;
+	background-color: lightsalmon;
+}
+
+.remove-template-element {
+	color: white;
+	background-color: lightgray;
+	position: relative;
+	top: 9px;
+	left: -7px;
+	cursor: pointer;
+	border-radius: 0 3px 3px 0;
+	padding: 2px 2px 2px 0;
+
+}
+

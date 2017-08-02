@@ -1,0 +1,69 @@
+[
+	{
+		"title": "Default Template",
+		"type": "Template",
+		"elements": [
+			{
+				"type": "Greeting",
+				"content": {
+					"morning": "Good morning ",
+					"afternoon": "Good afternoon ",
+					"evening": "Good evening "
+				}
+			},
+			{
+				"type": "TemplateVariable",
+				"content": "guest.firstName"
+			},
+			{
+				"type": "TemplateElement",
+				"content": ". Room "
+			},
+			{
+				"type": "TemplateVariable",
+				"content": "guest.reservation.roomNumber"
+			},
+			{
+				"type": "TemplateElement",
+				"content": " is now ready for you. Enjoy your stay, and let us know if you need anything."
+			}
+		]
+	},
+	{
+		"title": "Check In Time Template",
+		"type": "Template",
+		"elements": [
+			{
+				"type": "Greeting",
+				"content": {
+					"morning": "Good morning ",
+					"afternoon": "Good afternoon ",
+					"evening": "Good evening "
+				}
+			},
+			{
+				"type": "TemplateVariable",
+				"content": "guest.firstName"
+			},
+			{
+				"type": "TemplateElement",
+				"content": ". The check in time for your stay at "
+			},
+			{
+				"type": "TemplateVariable",
+				"content": "hotel.company"
+			},
+			{
+				"type": "TemplateElement",
+				"content": " is "
+			},
+			{
+				"type": "CheckInTime"
+			},
+			{
+				"type": "TemplateElement",
+				"content": "."
+			}
+		]
+	}
+]

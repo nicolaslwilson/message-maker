@@ -1,0 +1,44 @@
+{
+	"name": "message-maker",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"build": "webpack -p",
+		"start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
+		"open:src": "webpack-dev-server --open",
+		"lint": "esw webpack.config.* src buildScripts --color",
+		"lint:watch": "npm run lint -- --watch",
+		"test": "mocha --reporter progress build_scripts/test-setup.js \"src/**/*.test.js\"",
+		"test:watch": "npm run test -- --watch",
+		"security-check": "nsp check"
+	},
+	"author": "nicolas wilson",
+	"license": "ISC",
+	"devDependencies": {
+		"babel": "^6.23.0",
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-loader": "^7.1.1",
+		"babel-preset-latest": "^6.24.1",
+		"babel-register": "^6.24.1",
+		"chai": "^4.1.0",
+		"css-loader": "^0.28.4",
+		"eslint": "^4.3.0",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-watch": "^3.1.2",
+		"mocha": "^3.4.2",
+		"npm-run-all": "^4.0.2",
+		"nsp": "^2.7.0",
+		"style-loader": "^0.18.2",
+		"webpack": "^3.4.1",
+		"webpack-dev-server": "^2.6.1"
+	},
+	"dependencies": {
+		"jquery": "^3.2.1",
+		"lodash": "^4.17.4",
+		"material-components-web": "^0.16.0",
+		"moment-timezone": "^0.5.13",
+		"whatwg-fetch": "^2.0.3"
+	}
+}

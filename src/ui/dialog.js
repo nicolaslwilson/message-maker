@@ -1,5 +1,5 @@
 import {BaseElement} from './base-element.js';
-import * as mdc from 'material-components-web';
+import * as mdc from '@material/dialog';
 
 export class Dialog extends BaseElement {
 	constructor(title, content) {

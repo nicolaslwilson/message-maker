@@ -4,14 +4,15 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-		"build": "webpack -p",
+		"build": "webpack -p --optimize-minimize",
 		"start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
 		"open:src": "webpack-dev-server --open",
 		"lint": "esw webpack.config.* src buildScripts --color",
 		"lint:watch": "npm run lint -- --watch",
 		"test": "mocha --reporter progress build_scripts/test-setup.js \"src/**/*.test.js\"",
 		"test:watch": "npm run test -- --watch",
-		"security-check": "nsp check"
+		"security-check": "nsp check",
+		"stats": "webpack -p --json > stats.json"
 	},
 	"author": "nicolas wilson",
 	"license": "ISC",

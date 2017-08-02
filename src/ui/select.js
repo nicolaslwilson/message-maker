@@ -1,5 +1,5 @@
 import {BaseElement} from './base-element.js';
-import * as mdc from 'material-components-web';
+import {MDCSelect as mdc} from '@material/select';
 
 export class Select extends BaseElement {
 	constructor(array, key) {

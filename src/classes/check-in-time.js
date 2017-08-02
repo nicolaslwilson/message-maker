@@ -12,10 +12,14 @@ export class CheckInTime extends TemplateElement {
 		};
 	}
 
+	editTemplate(){
+		alert('This element outputs the start time for a reservation.');
+	}
+
 	getContent(data) {
 		let checkInTime = parseInt(data.guest.reservation.startTimestamp);
 		let timezone = data.hotel.timezone;
-		let formattedDataAndTime = moment.unix(checkInTime).tz(timezone).format("dddd, MMMM Do YYYY, h:mm a");
+		let formattedDataAndTime = moment.unix(checkInTime).tz(timezone).format("dddd, MMMM Do YYYY, h:mm a zz");
 		return formattedDataAndTime;
 	}
 }
